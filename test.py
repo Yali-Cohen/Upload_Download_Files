@@ -16,5 +16,5 @@ def num_to_negBin(bin_num,bits):
         else:
             bin_num[i] = '0'
     print(bin_num)
-    print("h1")
+    print("h1c")
 num_to_negBin(num_to_binary(5, 8),8)
