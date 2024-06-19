@@ -11,7 +11,6 @@ def num_to_binary(number, bits):
     
 x =num_to_binary(5, 8)
 print(x)
-
 def num_to_negBin(bin_num,bits):
     neg_bin_num = ""
     for i in range(bits):
