@@ -6,18 +6,34 @@ def num_to_binary(number, bits):
             number -= 2 ** bit
         else:
             bin_num += '0'
+    print("the num 5 in binary " , bin_num)
     return bin_num
-
+    
 x =num_to_binary(5, 8)
 print(x)
 
 
 def num_to_negBin(bin_num,bits):
-    for i in range(bits):#not to the number
+    neg_bin_num = ""
+    for i in range(bits):
         if bin_num[i] == '0':
-            bin_num = bin_num[:i] + "1" + bin_num[i+1:]
+            neg_bin_num += '1'
         else:
-            bin_num = bin_num[:i] + "0" + bin_num[i+1:]
-    print("the !binary num is: ",bin_num)
+            neg_bin_num += '0'
     
+    print("the !binary num is: ",bin_num)
+    #add one to the !binary
+    carry = 1
+    neg_bin_num = list(neg_bin_num)
+    for i in range(bits-1,-1,-1):
+        if neg_bin_num[i] == '0' and carry==1:
+            neg_bin_num[i] = '1'
+            carry = 0
+        elif neg_bin_num[i] == '1' and carry==1:
+            neg_bin_num[i] = '0'
+        else:
+            break
+    neg_bin_num = ''.join(neg_bin_num)
+    print("The !binary + 1 is: ", neg_bin_num)
+    return neg_bin_num
 num_to_negBin(num_to_binary(5, 8),8)
