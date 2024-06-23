@@ -11,6 +11,4 @@ def num_to_binary(number, bits):
         else:
             bin_num += '0'
     print(bin_num)
-
-
 num_to_binary(5, 8)
