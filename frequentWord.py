@@ -3,7 +3,6 @@ import sys
 def readFile():
     if len(sys.argv) < 3:
         sys.exit(1)
-    
     file_path = createFile()
     with open(file_path, 'r') as file:
         content = file.read()
